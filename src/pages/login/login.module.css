@@ -1,0 +1,54 @@
+.buttonLogin button {
+    background-image: linear-gradient(to right, #42275a 0%, #734b6d 51%, #42275a 100%)
+}
+
+.buttonLogin button {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.buttonLogin:hover button {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.columnGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30%;
+    padding: 2%;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.02);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.3px);
+-webkit-backdrop-filter: blur(2.3px);
+border: 1px solid rgba(255, 255, 255, 0.63);
+color: rgb(6, 0, 0);
+
+}
+.columnGridItemLogin{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+.image img{
+   border: 1px solid #fff;
+    border-radius: 2%;
+    height: 100%;
+    width: auto;
+}

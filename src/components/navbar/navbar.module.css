@@ -1,0 +1,9 @@
+.navbarMaster{
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: .5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}

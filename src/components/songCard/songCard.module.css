@@ -1,0 +1,24 @@
+.cardSong{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+}
+.cardMaster{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 0.4fr 0.2fr;
+    /* neon shadow */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: black ;
+    color: aqua;
+    border-radius: 10px;
+   
+}
+.buttonSelect{
+    text-align: center;
+}
+
+.content {
+    padding-left:10%;
+}

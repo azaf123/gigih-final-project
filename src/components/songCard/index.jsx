@@ -13,7 +13,7 @@ const SongCard = () => {
   return (
     <div className={Style.cardSong}>
       {data.map((item) => (
-        <div className="card">
+        <div className="card" key={item.id}>
           <div className={Style.cardMaster}>
             <div className="cardimage">
               <img src={item.album.images[0].url} alt="Placeholder image" />

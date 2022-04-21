@@ -4,6 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   playlist: [],
   playlistId: "",
+  playlistName: "",
+  playlistDescription: "",
 };
 
 const playlistSlice = createSlice({
@@ -11,14 +13,27 @@ const playlistSlice = createSlice({
   initialState,
   reducers: {
     setPlaylist: (state, action) => {
-      state.playlist = action.payload;
+      const { playlist } = action.payload;
+      state.playlist = playlist;
     },
     setPlaylistId: (state, action) => {
-      state.playlistId = action.payload;
+      const { playlistId } = action.payload;
+      state.playlistId = playlistId;
     },
+    setPlaylistName: (state, action) => {
+      const { playlistName } = action.payload;
+      state.playlistName = playlistName;
+    },
+    setPlaylistDescription: (state, action) => {
+      const { playlistDescription } = action.payload;
+      state.playlistDescription = playlistDescription;
+    },
+
   },
 });
 
-export const { setPlaylist, setPlaylistId } = playlistSlice.actions;
+export const {
+  setPlaylist, setPlaylistId, setPlaylistName, setPlaylistDescription,
+} = playlistSlice.actions;
 
 export default playlistSlice.reducer;

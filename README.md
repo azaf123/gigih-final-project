@@ -1,14 +1,9 @@
 <div id="top"></div>
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/muhammad-ridho-faza-al-kahfi/]
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://gigih-final-project-2.vercel.app/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Zazafy</h3>
   <p align="center">
@@ -25,7 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://gigih-final-project-2.vercel.app/)
+ Zazafy is an applcation for search song and create playlist on your spotify account
 
 
 
@@ -101,7 +96,7 @@ You may also see any lint errors in the console.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+M Ridho Faza AK - [https://www.linkedin.com/in/muhammad-ridho-faza-al-kahfi/) - ridhofaza1234@gmail.com
 
 Project Link: [https://github.com/azaf123/gigih-final-project.git](https://github.com/azaf123/gigih-final-project.git)
 
@@ -109,7 +104,6 @@ Project Link: [https://github.com/azaf123/gigih-final-project.git](https://githu
 
 
 
-[product-screenshot]: images/screenshot.png
 
 <!-- # Getting Started with ZAZAFY Web Application
 e Scripts

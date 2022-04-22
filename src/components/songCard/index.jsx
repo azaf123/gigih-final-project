@@ -10,10 +10,17 @@ const SongCard = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.song.data);
   const selected = useSelector((state) => state.song.selected);
+
+  const milisecondsToMinutes = (miliseconds) => {
+    const minutes = Math.floor(miliseconds / 60000);
+    const seconds = ((miliseconds % 60000) / 1000).toFixed(0);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
   return (
     <div className={Style.cardSong}>
       {data.map((item) => (
-        <div className="card" key={item.id}>
+        <div className="card-custom" key={item.id}>
           <div className={Style.cardMaster}>
             <div className="cardimage">
               <img src={item.album.images[0].url} alt="Placeholder image" />
@@ -22,8 +29,8 @@ const SongCard = () => {
               <div className="media">
 
                 <div className="media-content">
-                  <p className="title is-5">{item.name}</p>
-                  <p className="subtitle is-6">{item.artists[0].name}</p>
+                  <p className="title-custom is-5">{item.name}</p>
+                  <p className="subtitle-custom is-6">{item.artists[0].name}</p>
                 </div>
               </div>
             </div>
@@ -33,18 +40,20 @@ const SongCard = () => {
               <a>
                 <p>Popularity</p>
                 {item.popularity}
+                <p>Duration</p>
+                {milisecondsToMinutes(item.duration_ms)}
               </a>
             </div>
             <div className={Style.buttonSelect}>
               {selected.includes(item.uri) ? (
-                <div className={Style.buttonSelected}>
-                  <button type="button" className="button is-danger" onClick={() => dispatch(handleSongDeselected({ uri: item.uri }))}>
+                <div className={Style.buttonDeselected}>
+                  <button type="button" className="btn-grad" onClick={() => dispatch(handleSongDeselected({ uri: item.uri }))}>
                     Remove
                   </button>
                 </div>
               ) : (
-                <div className={Style.buttonDeselected}>
-                  <button type="button" className="button is-primary" onClick={() => dispatch(handleSongSelected({ uri: item.uri }))}>
+                <div className={Style.buttonSelected}>
+                  <button type="button" className="btn-grad" onClick={() => dispatch(handleSongSelected({ uri: item.uri }))}>
                     Add to Playlist
                   </button>
                 </div>
@@ -55,6 +64,7 @@ const SongCard = () => {
         </div>
       ))}
     </div>
+
   );
 };
 export default SongCard;

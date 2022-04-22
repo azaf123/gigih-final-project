@@ -14,4 +14,10 @@
 }
 .card {
     margin-top: 5%;
+}.cardPlaylist{
+ display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1rem;
+
 }
+

@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable arrow-body-style */
 /* eslint-disable max-len */
@@ -5,6 +6,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { Typography } from "@mui/material";
+import Style from "./createPlaylistCard.module.css";
 
 const createPlaylistCard = () => {
   const token = useSelector((state) => state.token.accesstoken);
@@ -17,13 +20,24 @@ const createPlaylistCard = () => {
     playlistId: "",
     playlistData: [],
   });
-
-  const handleOnChange = (e) => {
+  const [hasError = false, setHasError] = React.useState(false);
+  const handleOnChange = async (e) => {
     const { name, value } = e.target;
     setPlaylist({
       ...playlist,
       [name]: value,
     });
+    if (playlist.playlistName.length < 9) {
+      setHasError({
+        ...hasError,
+        playlistName: "Playlist name must be at least 10 characters",
+      });
+    } else {
+      setHasError({
+        ...hasError,
+        playlistName: "",
+      });
+    }
   };
 
   useEffect(() => {
@@ -33,11 +47,7 @@ const createPlaylistCard = () => {
       },
     })
       .then((res) => {
-        // console.log(res.data.uri.substring(13));
         setUser(res.data.uri.substring(13));
-      })
-      .catch((err) => {
-        console.log(err);
       });
   }, [token]);
 
@@ -47,29 +57,70 @@ const createPlaylistCard = () => {
       {
         name: playlist.playlistName,
         description: playlist.playlistDescription,
-        public: playlist.playlistType,
+        public: false,
       },
       {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       },
-    );
+    )
+      .then((res) => {
+        setPlaylist({
+          ...playlist,
+          playlistId: res.data.id,
+        });
+      });
   };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
     postPlaylist();
+    if (playlist.playlistName.length < 9) {
+      setHasError(true);
+      return alert("Playlist name must be at least 10 characters");
+    }
+    setHasError(false);
+    return alert("Playlist created");
   };
 
+  const addSongToPlaylist = async () => {
+    await axios.post(
+      `https://api.spotify.com/v1/playlists/${playlist.playlistId}/tracks`,
+      {
+        uris: selected,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    )
+      .then((res) => {
+        setPlaylist({
+          ...playlist,
+          playlistId: res.data.id,
+        });
+      });
+  };
+
+  useEffect(() => {
+    addSongToPlaylist();
+  }, [playlist.playlistId]);
+
   return (
-    <div>
-      <form onSubmit={handleOnSubmit}>
-        <div className="box">
+    <form onSubmit={handleOnSubmit}>
+      <div className={Style.container}>
+        <Typography variant="h4">
+          Create Playlist
+        </Typography>
+        <br />
+        <div className="box has-background-grey-light">
           <div className="field">
             <label className="label">Playlist Name</label>
             <div className="control">
-              <input className="input" type="text" placeholder="PlaylistName" onChange={handleOnChange} value={playlist.playlistName} name="playlistName" />
+              <input className="input" type="text" placeholder="Playlist Name" onChange={handleOnChange} value={playlist.playlistName} name="playlistName" min={10} />
+              {hasError.playlistName && <p className="help is-danger">{hasError.playlistName}</p>}
             </div>
           </div>
           <div className="field">
@@ -79,22 +130,19 @@ const createPlaylistCard = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">Public</label>
+            <label className="label">Type</label>
             <div className="control">
-              <div className="select">
-                <select>
-                  <option>Public</option>
-                  <option>Private</option>
-                </select>
-              </div>
+              {/* readonly */}
+              <input className="input" type="text" placeholder="Type" onChange={handleOnChange} value="Private" name="playlistType" readOnly />
             </div>
           </div>
           <div className="field">
             <button className="button is-primary" type="submit">Create Playlist</button>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
+
   );
 };
 export default createPlaylistCard;

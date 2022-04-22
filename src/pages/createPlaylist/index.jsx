@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Container, Typography } from "@mui/material";
 import SearchSong from "../../components/search/searchSong";
@@ -8,7 +10,7 @@ import Navbar from "../../components/navbar";
 import CardPlaylist from "../../components/cardPlaylist";
 import Footer from "../../components/footer";
 
-const CreatePlaylistPage = () => {
+const CreatePlaylistPage = ({ playlist }) => {
   return (
     <div className={Style.home}>
       <div className={Style.navbar}>
@@ -33,22 +35,15 @@ const CreatePlaylistPage = () => {
           </div>
           <hr />
           <div className={Style.cardPlaylist}>
-            <Typography variant="h4">
-              Create Playlist
-            </Typography>
             <div className={Style.cardPlaylistItem}>
-              <CreatePlaylistCard />
+              <CreatePlaylistCard playlist={playlist} />
             </div>
+            <div className={Style.cardPlaylistItem}>
+              <CardPlaylist playlist={playlist} />
+            </div>
+
           </div>
           <hr />
-          <div className={Style.cardPlaylist}>
-            <Typography variant="h4">
-              My Playlist
-            </Typography>
-            <div className={Style.cardPlaylistItem}>
-              <CardPlaylist />
-            </div>
-          </div>
 
         </div>
 

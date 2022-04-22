@@ -1,8 +1,5 @@
 .cardPlaylistItem{
-display: inline-flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: 1%;
-
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
 }

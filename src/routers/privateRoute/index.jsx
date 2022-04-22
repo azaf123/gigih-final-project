@@ -8,7 +8,6 @@ import { Route, Redirect } from "react-router-dom";
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const token = useSelector((state) => state.token.accesstoken);
   useEffect(() => {
-    console.log("token", token);
   }, [token]);
   //   const token = false;
   return (

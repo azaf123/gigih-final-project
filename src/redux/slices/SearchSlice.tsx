@@ -1,7 +1,10 @@
 /* eslint-disable no-param-reassign */
-import { createSlice } from "@reduxjs/toolkit";
-
-const initialState = {
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+// typescript
+type SearchSlice = {
+  search: string,
+};
+const initialState : SearchSlice = {
   search: "",
 };
 
@@ -9,7 +12,7 @@ const searchSlice = createSlice({
   name: "search",
   initialState,
   reducers: {
-    setSearch: (state, action) => {
+    setSearch: (state, action:PayloadAction<SearchSlice>) => {
       const { search } = action.payload;
       state.search = search;
     },

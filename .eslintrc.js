@@ -8,15 +8,18 @@ module.exports = {
     "airbnb",
     "eslint:recommended",
   ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
+    project: './tsconfig.json',
     ecmaVersion: "latest",
     sourceType: "module",
   },
   plugins: [
     "react",
+    "@typescript-eslint",
 
   ],
   rules: {
@@ -30,6 +33,17 @@ module.exports = {
       2,
       {
         namedComponents: "arrow-function",
+      },
+    ],
+    "react/jsx-filename-extension": [1, { extensions: [".tsx", ".jsx"] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
       },
     ],
   },

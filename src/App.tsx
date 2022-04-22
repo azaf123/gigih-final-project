@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import "./App.css";
 import React from "react";
 import {
@@ -16,16 +17,18 @@ import PageNotFound from "./routers/notFound";
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/home" component={Home} />
-          <PrivateRoute exact path="/create-playlist" component={CreatePlaylistPage} />
-          <Route component={PageNotFound} />
-        </Switch>
-      </Router>
-    </Provider>
+    <body>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/home" component={Home} />
+            <PrivateRoute exact path="/create-playlist" component={CreatePlaylistPage} />
+            <Route component={PageNotFound} />
+          </Switch>
+        </Router>
+      </Provider>
+    </body>
   );
 };
 

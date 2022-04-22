@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/button-has-type */
 import { Button, Typography } from "@mui/material";
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Style from "./cardPlaylist.module.css";
 
@@ -16,26 +18,29 @@ const CardPlaylist = () => {
       },
     })
       .then((res) => {
-        console.log(res.data.items);
         setPlaylistData(res.data.items);
-      })
-      .catch((err) => {
-        console.log(err);
       });
   };
+  useEffect(() => {
+    getPlaylist();
+  }, []);
 
   return (
     <div className={Style.cardPlaylist}>
-      <div className={Style.cardPlaylistItem}>
-        <Button onClick={getPlaylist}>
-          <Typography variant="h4">
-            Playlist
-          </Typography>
-        </Button>
 
+      <Typography variant="h4">
+        My Playlist
+      </Typography>
+      <br />
+      <Button variant="outlined" onClick={getPlaylist}>
+        Refresh your new playlist here
+      </Button>
+      <br />
+      <br />
+      <div className={Style.cardPlaylistItem}>
         {playlistData.map((item) => {
           return (
-            <div className="card">
+            <div className="card has-background-grey-lighter" key={item.id}>
               <div className="card-content">
                 <div className="content">
                   <Typography variant="h4">

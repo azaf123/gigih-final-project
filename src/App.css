@@ -1,6 +1,7 @@
 @import 'bulma/css/bulma.css';
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -37,6 +38,11 @@
     transform: rotate(360deg);
   }
 }
-body {
-  background-color: #afc9ff;
+html {
+  background-color: rgb(174, 108, 108);
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
 }

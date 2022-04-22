@@ -11,7 +11,7 @@ import { setToken } from "../../redux/slices/TokenSlice";
 // get the token from local storage
 const AUTH_URL = "https://accounts.spotify.com/authorize";
 const CLIENT_ID = `${process.env.REACT_APP_SPOTIFY_CLIENT_ID}`;
-const REDIRECT_URI = "http://localhost:3000/";
+const REDIRECT_URI = "https://gigih-final-project-2.vercel.app/";
 const SCOPES = "user-read-private user-read-email playlist-modify-private playlist-read-private playlist-modify-public playlist-read-collaborative user-read-playback-state user-modify-playback-state user-read-currently-playing user-read-recently-played user-top-read user-follow-read user-follow-modify user-library-read user-library-modify";
 const URL = `${AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES}&response_type=token&show_dialog=true`;
 

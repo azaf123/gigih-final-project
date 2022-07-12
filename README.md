@@ -113,9 +113,114 @@ Project Link: [https://github.com/azaf123/gigih-final-project.git](https://githu
 
 <!-- # Getting Started with ZAZAFY Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+
+<h3 align="center">Zazafy</h3>
+  <p align="center">
+    Zazafy is an applcation for search song and create playlist on your spotify account
+    <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://gigih-final-project-2.vercel.app/">View Application</a>
+   
+  </p>
+</div>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+ Zazafy is an applcation for search song and create playlist on your spotify account
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Built With
+
+* [React.js](https://reactjs.org/)
+* [bulma.io](https://bulma.io/)
+* [MUI](https://mui.com/)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
+## Getting Started with Zazafy Web Music App
+
+This project was built by me using react.js for final project in GenerasiGigih 2.0 Front End Path. 
+Zazafy using Spotify Data API 
+
+### Prerequisites
+
+This is the things you need to use the software and how to install them.
+
+Setting your CSS Modules because there are some files with typescript 
+in your ### `setting.json` 
+add this script
+ ### `typescript.tsdk": "node_modules/typescript/lib`
+ ### `typescript.enablePromptUseWorkspaceTsdk": true`
+
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/azaf123/gigih-final-project.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Create file named by `.env.local`
+
+4. Put your Spotify client_id to `.env.local` 
+    that you have been created before 
+    
+5. You can create in this link [Create Spotify API](https://developer.spotify.com/dashboard/)
+    
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+M Ridho Faza AK - [https://www.linkedin.com/in/muhammad-ridho-faza-al-kahfi/) - ridhofaza1234@gmail.com
+
+Project Link: [https://github.com/azaf123/gigih-final-project.git](https://github.com/azaf123/gigih-final-project.git)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+<!-- # Getting Started with ZAZAFY Web Application
+e Scripts
+
 
 
 In the project directory, you can run:

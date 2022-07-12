@@ -70,6 +70,7 @@ add this script
    npm install
    ```
 3. Create file named by `.env.local`
+<<<<<<< HEAD
 
 4. Put your Spotify client_id to `.env.local` 
     that you have been created before 
@@ -104,11 +105,23 @@ You may also see any lint errors in the console.
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/azaf123/gigih-final-project.git](https://github.com/azaf123/gigih-final-project.git)
+=======
+
+4. Put your Spotify client_id to `.env.local` 
+    that you have been created before 
+    
+5. You can create in this link [Create Spotify API](https://developer.spotify.com/dashboard/)
+    
+
+>>>>>>> dca2c52 (edit readme 2)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+<!-- USAGE EXAMPLES -->
+## Usage
 
+<<<<<<< HEAD
 [product-screenshot]: images/screenshot.png
 
 <!-- # Getting Started with ZAZAFY Web Application
@@ -146,6 +159,17 @@ Project Link: [https://github.com/azaf123/gigih-final-project.git](https://githu
 * [bulma.io](https://bulma.io/)
 * [MUI](https://mui.com/)
 
+=======
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+>>>>>>> dca2c52 (edit readme 2)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -189,6 +213,7 @@ add this script
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+<<<<<<< HEAD
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -211,6 +236,8 @@ You may also see any lint errors in the console.
 
 M Ridho Faza AK - [https://www.linkedin.com/in/muhammad-ridho-faza-al-kahfi/) - ridhofaza1234@gmail.com
 
+=======
+>>>>>>> dca2c52 (edit readme 2)
 Project Link: [https://github.com/azaf123/gigih-final-project.git](https://github.com/azaf123/gigih-final-project.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>

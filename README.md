@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://gigih-final-project-2.vercel.app/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+   zazafy
   </a>
 
 <h3 align="center">Zazafy</h3>

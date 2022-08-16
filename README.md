@@ -236,8 +236,6 @@ You may also see any lint errors in the console.
 
 M Ridho Faza AK - [https://www.linkedin.com/in/muhammad-ridho-faza-al-kahfi/) - ridhofaza1234@gmail.com
 
-=======
->>>>>>> dca2c52 (edit readme 2)
 Project Link: [https://github.com/azaf123/gigih-final-project.git](https://github.com/azaf123/gigih-final-project.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
